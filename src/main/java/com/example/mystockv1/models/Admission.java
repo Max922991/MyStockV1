@@ -1,7 +1,6 @@
 package com.example.mystockv1.models;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Min;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
