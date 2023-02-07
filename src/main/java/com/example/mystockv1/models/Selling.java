@@ -1,11 +1,12 @@
 package com.example.mystockv1.models;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,5 +31,5 @@ public class Selling {
     @ManyToOne       //??????????
     Stock stock;
     @ManyToMany    // ??????????
-    List<Product> products;
+    List<Product> products = new ArrayList<>();
 }

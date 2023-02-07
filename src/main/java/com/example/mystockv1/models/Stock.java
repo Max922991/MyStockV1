@@ -1,6 +1,6 @@
 package com.example.mystockv1.models;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;

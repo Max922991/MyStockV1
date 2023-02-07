@@ -1,11 +1,12 @@
 package com.example.mystockv1.models;
 
-import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
+import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -25,12 +26,10 @@ public class Admission {
     Long id;
     @Column(name = "quantity")
     int quantity;
-    @Column(name = "purchase_price")
-    Integer purchasePrice;
-    @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)    //???????????
+    @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
     Stock stock;
-    @ManyToMany(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)   //????????????
-    List<Product> products;
+    @ManyToMany(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
+    List<Product> products = new ArrayList<>();
 
 
 }
